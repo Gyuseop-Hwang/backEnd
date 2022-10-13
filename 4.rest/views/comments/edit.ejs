@@ -10,7 +10,7 @@
 
 <body>
   <h1>Edit</h1>
-  <form action="/comments/<%= foundComment.id %>?_method=PATCH" method="post">
+  <form action="/comments/<%= foundComment.id %>?_method=PUT" method="post">
     <label for="comment">Edit comment</label>
     <br>
     <textarea name="comment" id="comment" cols="50" rows="5"

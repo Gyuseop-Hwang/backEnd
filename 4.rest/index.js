@@ -66,11 +66,11 @@ app.get('/comments/:id/edit', (req, res) => {
   res.render('comments/edit', { foundComment })
 })
 
-app.patch('/comments/:id', (req, res) => {
+app.put('/comments/:id', (req, res) => {
   const { id } = req.params;
-  const newCommentText = req.body.comment
-  const foundComment = comments.find(x => x.id === id);
-  foundComment.comment = newCommentText;
+  const newComment = req.body;
+  const foundIndex = comments.findIndex(x => x.id === id);
+  comments[foundIndex] = newComment;
   res.redirect('/comments')
 })
 
