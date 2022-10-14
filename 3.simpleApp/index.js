@@ -2,6 +2,10 @@ const express = require('express');
 const path = require('path');
 const redditData = require('./data.json');
 const app = express();
+const test = require('./data.json');
+console.log(redditData);
+console.log('구분')
+console.log(test);
 
 
 app.use(express.static(path.join(__dirname, 'public')));
