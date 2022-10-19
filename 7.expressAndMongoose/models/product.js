@@ -5,7 +5,7 @@ const Schema = mongoose.Schema
 const productSchema = new Schema({
   name: {
     type: String,
-    required: true,
+    required: [true, 'name cannot be blank'],
   },
   price: {
     type: Number,
